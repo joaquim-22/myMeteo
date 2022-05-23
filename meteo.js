@@ -37,11 +37,13 @@ let apiCall = async function (avecIp = true) {
         fetch(`https://pixabay.com/api/?key=27567288-0fe3e1bee5acc3843b5d106fe&q=${ville}&image_type=photo`)
             .then(reponse => reponse.json())
             .then(imageUrl => {
-                let img = imageUrl.hits[0].largeImageURL;
-                document.body.style.background = `url(${img}) no-repeat 100% 100%`;
+                let randomPhoto = Math.floor(Math.random() * 20)
+                let img = imageUrl.hits[randomPhoto].largeImageURL;
+                document.body.style.background = `url(${img})`;
+                document.body.style.backgroundSize = "100% 100%";
             })
     } 
-    catch (error) {
+    catch {
         alert("Error. Notre système ne trouve pas cette ville. Vérifiez si la ville est bien ecrit.");
         apiCall(true);
     }
@@ -66,12 +68,14 @@ let display = function (data) {
     fetch(`http://api.timezonedb.com/v2.1/get-time-zone?key=${apiKeyTime}&format=json&by=position&lat=${lat}&lng=${lon}`)
         .then (reponse => reponse.json())
         .then (time => {
-            document.querySelector("#timeDisplay").innerHTML = time.formatted.slice(0, -3);
+            document.querySelector("#dayDisplay").innerHTML = time.formatted.slice(0, 11);
+            document.querySelector("#timeDisplay").innerHTML = time.formatted.slice(11, -3)
+
         });
 
     let iconcode = data.weather[0].icon;
     let iconurl = "http://openweathermap.org/img/w/" + iconcode + ".png";
-    document.querySelector("#imageIcon").src=iconurl;
+    document.querySelector("#imageIcon").src = iconurl;
 };
 
 document.querySelector("#buttonSearch").addEventListener("click", function (event) {

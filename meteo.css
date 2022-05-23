@@ -38,7 +38,19 @@ header img {
 
 #time {
     width: 40%;
-    font-size: 0.8em;
+    font-size: 1em;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+#dayDisplay {
+    width: 60%;
+}
+
+#timeDisplay {
+    width: 40%;
 }
 
 #ville {
@@ -164,4 +176,14 @@ header img {
 
 .titleText {
     font-weight: bold;
+}
+
+@media (max-width: 374px) {
+    #time {
+        flex-direction: column;
+    }
+
+    #time p {
+        width: 80%;
+    }
 }
