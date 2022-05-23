@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>myMeteo</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="meteo.css">
+</head>
+<body>
+    <main>
+        <header>
+            <img src="images/pngegg.png" alt="">
+            <p>MyMeteo</p>
+        </header>
+        <div class="mainContent">
+            <div id="headerBody">
+                <div id="ville">
+                    <p id="villeName"></p>
+                </div>
+                <div id="time">
+                    <p>Heure Local depuis la dernière mise à jour:</p>
+                    <p id="timeDisplay"></p>
+                </div>
+            </div>
+            <div id="allInfo">
+                <div id="meteoInfo">
+                    <div id="temperature">
+                        <div id="actuelTemp">
+                            <p class="titleText">Temp. Actuel</p>
+                            <img src="images/temperature.png" alt="Icon Temperature Actuel">
+                            <p class="resultsTemp" id="actuelTempText"></p>
+                        </div>
+                        <div id="minTemp">
+                            <p class="titleText">Temp. Min</p>
+                            <img src="images/low-temperature.png" alt="Icon Temperature Min">
+                            <p class="resultsTemp" id="minTempText"></p>
+                        </div>
+                        <div id="maxTemp">
+                            <p class="titleText">Temp. Max</p>
+                            <img src="images/high-temperature.png" alt="Icon Temperature Max">
+                            <p class="resultsTemp" id="maxTempText"></p>
+                        </div>
+                    </div>
+                    <div id="barRecherche">
+                        <input type="text" id="villeInput">
+                        <button type="submit" id="buttonSearch">
+                            <img src="images/global-search.png" alt="Icon Search">
+                        </button>
+                    </div>
+                    <div class="info">
+                        <div class="optionsBox">
+                            <p class="titleText">Resssenti</p>
+                            <img src="images/thermique.png" alt="Icon Ressenti">
+                            <p class="results" id="sensationText"></p>
+                        </div>
+                        <div class="optionsBox">
+                            <p class="titleText">État</p>
+                            <div id="icone">
+                                <img id="imageIcon" src="images/pngegg.png" alt="Icon État">
+                            </div>
+                            <p id="etatText"></p>
+                        </div>
+                        <div class="optionsBox">
+                            <p class="titleText">Humidité</p>
+                            <img src="images/humidite.png" alt="Icon Humidité">
+                            <p class="results" id="humiditeText"></p>
+                        </div>
+                        <div class="optionsBox">
+                            <p class="titleText">Vent</p>
+                            <img src="images/la-meteo.png" alt="Icon Vent">
+                            <p class="results" id="ventText"></p>
+                        </div>
+                        <div class="optionsBox">
+                            <p class="titleText">Pression</p>
+                            <img src="images/pression.png" alt="Icon Pression">
+                            <p class="results" id="pressureText"></p>
+                        </div>
+                        <div class="optionsBox">
+                            <p class="titleText">Visibilité</p>
+                            <img src="images/visibilite.png" alt="Icon Visibilité">
+                            <p class="results" id="visibiliteText"></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <script src="meteo.js"></script>
+</body>
+</html>
