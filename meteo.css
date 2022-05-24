@@ -12,7 +12,7 @@ main {
 header {
     width: 100%;
     display: flex;
-    background-color: rgba(43, 40, 40, 0.9);
+    background-color: rgba(43, 40, 40, 0.8);
     align-items: center;
     justify-content: center;
     border-bottom: 1px solid rgba(141, 139, 139, 0.8);
@@ -32,7 +32,7 @@ header img {
 #headerBody {
     display: flex;
     color: white;
-    background-color: rgba(43, 40, 40, 0.9);
+    background-color: rgba(43, 40, 40, 0.8);
     justify-content: center;
 }
 
@@ -114,7 +114,7 @@ header img {
     flex-wrap: wrap;
     margin-bottom: 15px;
     color: white;
-    background-color: rgba(43, 40, 40, 0.9);
+    background-color: rgba(43, 40, 40, 0.8);
     box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
     justify-content: space-around;
     border-radius: 20px;
@@ -145,7 +145,7 @@ header img {
     font-size: 0.9em;
     width: 45%;
     height: 30%;
-    background-color: rgba(241, 241, 241, 0.8);
+    background-color: rgba(241, 241, 241, 0.9);
     display: flex;
     flex-direction: column;
     align-items: center;
