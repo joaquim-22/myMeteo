@@ -1,5 +1,6 @@
 html, body {
-    margin: 0px;
+    max-width: 768px;
+    margin: 0px auto;
     padding: 0px;
     font-family: 'Helvetica Neue', sans-serif;
 }
